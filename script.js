@@ -9,11 +9,6 @@ if(theme == null){
 }
 
 let temas = document.getElementsByClassName('theme-dot')
-let enviar = document.getElementById('submit-btn')
-
-enviar.addEventListener('click', function(){
-	alert('| :( | Ainda não está funcionando, recomendo que clique no simbulo do WhatsApp')
-})
 
 for (var i=0; temas.length > i; i++){
 	temas[i].addEventListener('click', function(){
