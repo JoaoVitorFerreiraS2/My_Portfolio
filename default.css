@@ -270,7 +270,6 @@ h6 { font-size: 16px;}
 
 .links:hover{
 	transition: 1s;
-	color: white;
 	text-shadow: 5px 5px 15px black;
 }
 
