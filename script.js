@@ -1,4 +1,4 @@
-console.log('Its working')
+console.log('Estamos trabalhando...')
 
 let theme = localStorage.getItem('theme')
 
@@ -8,13 +8,17 @@ if(theme == null){
 	setTheme(theme)
 }
 
-let themeDots = document.getElementsByClassName('theme-dot')
+let temas = document.getElementsByClassName('theme-dot')
+let enviar = document.getElementById('submit-btn')
 
+enviar.addEventListener('click', function(){
+	alert('| :( | Ainda não está funcionando, recomendo que clique no simbulo do WhatsApp')
+})
 
-for (var i=0; themeDots.length > i; i++){
-	themeDots[i].addEventListener('click', function(){
+for (var i=0; temas.length > i; i++){
+	temas[i].addEventListener('click', function(){
 		let mode = this.dataset.mode
-		console.log('Option clicked:', mode)
+		console.log('Opções de cliques:', mode)
 		setTheme(mode)
 	})
 }
