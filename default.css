@@ -50,7 +50,7 @@ ul{
 	list-style: none;
 }
 
-h1 { font-size: 56px;}
+h1 { font-size: 40px;}
 h2 { font-size: 36px;}
 h3 { font-size: 28px;}
 h4 { font-size: 24px;}
@@ -265,7 +265,7 @@ h6 { font-size: 16px;}
 
 .links{
 	font-weight: bold;
-	font-size: 2.5vh;
+	font-size: 26px;
 }
 
 .links:hover{
@@ -274,7 +274,7 @@ h6 { font-size: 16px;}
 }
 
 .list_skill li{
-	text-align: center;
+
 	cursor: default;
 }
 
@@ -319,8 +319,9 @@ h6 { font-size: 16px;}
 
 
 #skills{
+	width: 100%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 	background-color: var(--previewShadow);
 }
 
@@ -357,13 +358,18 @@ h6 { font-size: 16px;}
 	object-fit: cover;
 }
 
+.thumbnail:hover{
+	height: 200px;
+}
+
+
 .post-preview{
 	background-color: #fff;
 	padding:15px;
 }
 
 .post-preview a{
-	
+
 }
 
 .post-title{
@@ -437,7 +443,7 @@ footer{
 }
 
 footer img{
-	height:70px; 
+	height: 10%; 
 	position:fixed; 
 	bottom: 25px; 
 	right: 25px; 
