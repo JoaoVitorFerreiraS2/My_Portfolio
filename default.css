@@ -93,13 +93,16 @@ h6 {
 	animation: pisca .7s infinite;
 }
 
-@keyframes pisca{
-	0%, 100%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0;
-    }
+@keyframes pisca {
+
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
 }
 
 
@@ -155,6 +158,8 @@ h6 {
 
 
 .nav-wrapper {
+	display: flex;
+	flex-direction: row;
 	border-radius: 5px 5px 0 0;
 	grid-area: nav-wrapper;
 	border-bottom: 1px solid var(--borderColor);
@@ -162,6 +167,94 @@ h6 {
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--mainColor);
+}
+
+.button_onoff{
+	width: 150px;
+}
+
+.onoff {
+	margin-left: -27px;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	position: relative;
+	cursor: pointer;
+	width: 150px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.onoff label {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	background: #000000;
+	border-radius: 5px;
+	color: #FFF;
+	-webkit-transition: background 0.3s, text-indent 0.3s;
+	-moz-transition: background 0.3s, text-indent 0.3s;
+	-o-transition: background 0.3s, text-indent 0.3s;
+	transition: background 0.3s, text-indent 0.3s;
+	text-indent: 27px;
+	-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset;
+	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset;
+}
+
+.onoff label:after {
+	content: 'Desenvolvedor';
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	font-size: 15px;
+	font-family: 'Russo One', sans-serif;
+	color: #ffffff;
+	text-shadow: 2px 1px 0px rgba(255, 0, 0, 0.35);
+	z-index: 1;
+}
+
+.onoff label:before {
+	content: '';
+	width: 15px;
+	height: 24px;
+	border-radius: 3px;
+	background: #FFF;
+	position: absolute;
+	z-index: 2;
+	top: 3px;
+	left: 3px;
+	display: block;
+	-webkit-transition: left 0.3s;
+	-moz-transition: left 0.3s;
+	-o-transition: left 0.3s;
+	transition: left 0.3s;
+	-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+.onoff input:checked+label {
+	background: #ffffff;
+	text-indent: 8px;
+}
+
+.onoff input:checked+label:after {
+	content: 'ANALISTA TI';
+	color: #091707;
+	text-shadow: 2px 1px 0px rgba(255, 255, 255, 0.35);
+}
+
+.onoff input:checked+label:before {
+	left: 130px;
 }
 
 #navigation a {
@@ -326,24 +419,24 @@ h6 {
 	position: relative;
 }
 
-.links_icon{
+.links_icon {
 	display: flex;
 	gap: 50px;
 	flex-direction: row;
 }
 
-.links img{
+.links img {
 	width: 60px;
 	height: auto;
-	filter: drop-shadow(2px 1px ) drop-shadow(-1px -1px rgba(0, 0, 255, 0.3));
+	filter: drop-shadow(2px 1px) drop-shadow(-1px -1px rgba(0, 0, 255, 0.3));
 	transition: 0.5s;
 }
 
-.links img:hover{
+.links img:hover {
 	filter: drop-shadow(2px 1px rgba(0, 0, 255, 0.3)) drop-shadow(-1px -1px rgba(255, 0, 0, 0.349));
 }
 
-.alinhamento_links{
+.alinhamento_links {
 	text-align: center;
 }
 

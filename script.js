@@ -1,9 +1,38 @@
 console.log('Estamos trabalhando...')
 
-const titulo = document.getElementById('acao');
+mudanca = true
+
+const descricao = document.getElementById('acao');
+let checkbox = document.getElementById('checkboxID')
+
+
+checkbox.addEventListener('click', verificarTrueOrFalse)
+
+verificar()
+
+function verificarTrueOrFalse(){
+	if(mudanca == true){
+		mudanca = false
+		verificar()
+		console.log(mudanca)
+	} else if (mudanca == false){
+		mudanca = true
+		verificar()
+		console.log(mudanca)
+	}
+}
+
+function verificar() {
+	let apresentacao = document.getElementById('h1_apresentacao');
+	if (mudanca == true) {
+		apresentacao.innerHTML = 'Olá, meu nome é João Vitor <br> e sou desenvolvedor Back-End';
+	} else if (mudanca == false){
+		apresentacao.innerHTML = 'Olá, meu nome é João Vitor <br> e sou Analista de TI'
+	}
+}
 
 function typeWrite(elemento) {
-	const textoArray = elemento.innerHTML.split('');
+	const textoArray = elemento.inner.split('');
 	elemento.innerHTML = ' ';
 	textoArray.forEach(function (letra, i) {
 
@@ -15,7 +44,7 @@ function typeWrite(elemento) {
 }
 
 
-typeWrite(titulo);
+typeWrite(descricao);
 
 let theme = localStorage.getItem('theme')
 
