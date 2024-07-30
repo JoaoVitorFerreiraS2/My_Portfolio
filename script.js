@@ -70,7 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
             themeStyle.href = 'green.css'
         } else if (mode == 'purple') {
             themeStyle.href = 'purple.css'
-        }
+        } else if (mode == 'black'){
+			themeStyle.href = 'black.css'
+		}
 
         localStorage.setItem('theme', mode)
     }

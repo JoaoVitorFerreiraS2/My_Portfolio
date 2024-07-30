@@ -12,7 +12,6 @@
 	--previewBg: rgb(251, 249, 243, 0.8);
 	--previewShadow: #f0ead6;
 
-
 	--buttonColor: black;
 
 
@@ -489,6 +488,7 @@ h6 {
 	display: flex;
 	justify-content: flex-start;
 	background-color: var(--previewShadow);
+	border-radius: 30px;
 }
 
 .social-links {
